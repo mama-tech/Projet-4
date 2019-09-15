@@ -1,0 +1,205 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  background-image: url(back.jpg);
+  background-size: 100%;
+}
+
+h1{
+font-family: '#', Helvetica, Arial, sans-serif;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+color: #ffffff;
+margin-left: 5%;
+margin-top: 5%;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  color: transparent;
+  width: 100%;
+  padding: 20px;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.myburger{
+  width: 40px;
+  height: 40px;
+  color: black;
+  margin-left: 2%;
+  cursor: pointer;
+  position: fixed;
+  top: 10%;
+  left: 90%;
+  z-index:100;
+  transition: transform 0.5s ease-in-out;
+}
+.myburger span{
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+transition-duration: 0.2s;
+}
+.myburger span::before{
+  content: attr(data-before);
+  content: '';
+  position: absolute;
+  width: 65%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transform: matrix(1, 0, 0, 1, 0, -10);
+  transition-duration: 0.2s;
+  top:0px;
+}
+.myburger:hover span::before{
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transition-duration: 0.3s;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.myburger.active span{
+  transform: translateY(0px) rotateZ(-45deg);
+  background-color: #e31019;
+  transition: transform  ease-in-out 0.6s;
+}
+.myburger.active span::before{
+  transform: translateY(0px) rotateZ(90deg);
+  background-color: #e31019;
+  transition: transform 0.5s ease-in-out;
+  top:0px;
+  width: 100%;
+}
+.aftermenu{
+  background-color: white;
+  position: fixed;
+  right: -100%;
+  z-index: 10;
+  transition-duration: 0.6s;
+}
+.aftermenu1{
+  background-color: white;
+  position: fixed;
+  right: -100%;
+  z-index: 10;
+  transition-duration: 0.6s;
+}
+.aftermenu a{
+  font-family: '#', Helvetica, Arial, sans-serif,bolder;
+  font-size: 3em;
+  color: #ffffff;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  padding-top: 30px;
+  width: 20%;
+  margin-left: 7%;
+  transition-duration: 0.6s;
+  top: 310px;
+}
+.aftermenu_open{
+  background-color:#e31019;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  transition-duration: 0.6s;
+  position: absolute;
+}
+.aftermenu1 {
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  width: 200px;
+  height: 100%;
+  display: block;
+  padding-top: 30px;
+}
+.aftermenu1_open{
+  right: 0px;
+  transition-duration: 0.4s;
+  background-color: white;
+  height: 100%;
+  width: 200px;
+  transition-duration: 0.7s;
+}
+.navAfter{
+  margin-top: 60%;
+}
+.menuAfter{
+  height: 100%;
+  width: 200px;
+  margin-top: 60%;
+  right: 0px;
+  background-color: white;
+  transition-duration: 0.4s;
+}
+.menuAfter a, p{
+  top: 200px;
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+  display: block;
+  padding-top: 20px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.choose-language{
+  font-family: 'px-grotesk-regular';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.separator{
+    width: 35px;
+    height: 1px;
+    background-color: rgba(0,0,0,0.2);
+    display: block;
+    margin: 15px auto;
+}
+.link:hover{
+  transform: translateX(20px);
+
+}
+.navAfter h1{
+  position: absolute;
+  top: 70%;
+}
